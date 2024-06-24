@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="footer-content">
         <div className="footer-content-left">
             <img src={assets.logo} alt="" />
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            <p>At FlavorFind, we believe that great food brings people together. Founded with a passion for culinary excellence and a commitment to quality, our mission is to provide fresh, delicious meals that cater to every taste and preference. Whether you're in the mood for a hearty home-cooked dinner, a light and healthy lunch, or a decadent dessert, we've got you covered. Using only the finest ingredients, our talented chefs create a diverse menu that reflects both traditional flavors and innovative recipes. Join us in celebrating the joy of good food and exceptional service. Welcome to FlavorFind – where every meal is a masterpiece!</p>
             <div className="footer-social-icons">
                 <img src={assets.facebook_icon} alt="" />
                 <img src={assets.twitter_icon} alt="" />
@@ -28,12 +28,12 @@ const Footer = () => {
             <h2>GET IN TOUCH</h2>
             <ul>
                 <li>+1-212-456-7890</li>
-                <li>contact@tomato.com</li>
+                <li>contact@flavorfind.com</li>
             </ul>
         </div>
       </div>
       <hr />
-      <p className="footer-copyright">Copyright 2024 © Tomato.com - All Right Reserved.</p>
+      <p className="footer-copyright">Copyright 2024 © FlavorFind.com - All Right Reserved.</p>
     </div>
   )
 }
