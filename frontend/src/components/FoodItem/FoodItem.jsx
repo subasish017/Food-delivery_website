@@ -4,30 +4,24 @@ import { assets } from '../../assets/assets';
 import { StoreContext } from '../../Context/StoreContext';
 
 const FoodItem = ({ image, name, price, desc, id }) => {
-    const [itemCount, setItemCount] = useState(0);
     const { cartItems, addToCart, removeFromCart, url } = useContext(StoreContext);
+
+    console.log('Context values in FoodItem:', { cartItems, addToCart, removeFromCart, url });
+
+    if (!cartItems || !addToCart || !removeFromCart) {
+        console.error('Cart functions or cart items are missing in the context', { cartItems, addToCart, removeFromCart });
+        return null; // Return null or some fallback UI
+    }
 
     if (!image || !name || !price || !desc || !id) {
         console.error('One or more props are missing or invalid:', { image, name, price, desc, id });
         return null; // Return null or some fallback UI
     }
 
-    if (!url) {
-        console.error('URL is missing in the context');
-        return null;
-    }
-
-    if (!cartItems || !addToCart || !removeFromCart) {
-        console.error('Cart functions or cart items are missing in the context');
-        return null;
-    }
-
-    console.log('Rendering FoodItem with props:', { image, name, price, desc, id });
-
     return (
         <div className='food-item'>
             <div className='food-item-img-container'>
-                <img className='food-item-image' src={`${url}/images/${image}`} alt={name} />
+                <img className='food-item-image' src={url + "/images/" + image} alt={name} />
                 {!cartItems[id]
                     ? <img className='add' onClick={() => addToCart(id)} src={assets.add_icon_white} alt="Add to cart" />
                     : <div className="food-item-counter">
