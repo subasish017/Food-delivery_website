@@ -1,13 +1,12 @@
 import { createContext, useEffect, useState } from "react";
-import { menu_list } from "../assets/assets";
-import { food_list as staticFoodList } from '../assets/assets';
+import { food_list, menu_list } from "../assets/assets";
 import axios from "axios";
 export const StoreContext = createContext(null);
 
 const StoreContextProvider = (props) => {
 
     const url = "https://food-backend-pvjd.onrender.com"
-    const [food_list, setFoodList] = useState(staticFoodList);
+    const [food_list, setFoodList] = useState([]);
     const [cartItems, setCartItems] = useState({});
     const [token, setToken] = useState("")
 
