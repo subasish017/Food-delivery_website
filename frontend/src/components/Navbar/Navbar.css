@@ -1,8 +1,11 @@
 .navbar {
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
     padding: 20px 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 1000;
 }
 
 .navbar .logo {
@@ -59,7 +62,6 @@ position: relative;
 
 .navbar-profile{
     position: relative;
-
 }
 .navbar-profile-dropdown{
     position: absolute;
@@ -67,6 +69,7 @@ position: relative;
     right: 0;
     z-index: 1;
 }
+
 .navbar-profile-dropdown li{
     display: flex;
     align-items: center;
