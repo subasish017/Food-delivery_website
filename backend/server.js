@@ -27,7 +27,7 @@ app.use('/api/order', orderRouter);
 
 // Serve static files from the assets directory in the frontend
 const __dirname = path.resolve();
-const assetsPath = path.join(__dirname, 'public');
+const assetsPath = path.join(__dirname, 'uploads');
 console.log(`Serving static files from: ${assetsPath}`); // Log the path for verification
 
 app.use('/images', express.static(assetsPath));
